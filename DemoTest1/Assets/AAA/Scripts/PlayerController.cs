@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
         transform.position = new Vector3(
                 Mathf.Clamp(transform.position.x, -5.25f, 2.0f),
                 transform.position.y,
-                transform.position.z);
+                transform.position.z - speed * Time.fixedDeltaTime);
         #endregion
 
         #region Touch Controller
@@ -44,5 +44,6 @@ public class PlayerController : MonoBehaviour
             }
         }
         #endregion
+        //Debug.Log(transform.position.z);
     }
 }
