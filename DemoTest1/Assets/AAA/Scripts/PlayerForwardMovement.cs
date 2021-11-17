@@ -5,12 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class PlayerForwardMovement : MonoBehaviour
 {
-    public Rigidbody rb;
+    Rigidbody rb;
     public float speed = 0.0025f;
     public static bool gameEnded = false;
 
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         gameEnded = false;
 
     }
@@ -22,7 +23,7 @@ public class PlayerForwardMovement : MonoBehaviour
         if (!gameEnded)
         {
             
-            Vector3 movement = transform.forward * speed * Time.fixedDeltaTime;
+            Vector3 movement = transform.forward * speed * Time.fixedDeltaTime ;
             rb.MovePosition(rb.position + movement);
 
         }
