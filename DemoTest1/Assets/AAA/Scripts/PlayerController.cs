@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
                 transform.position = new Vector3(
                     transform.position.x + touch.deltaPosition.x * -speedModifier,
                     transform.position.y,
-                    transform.position.z);
+                    transform.position.z - speed * Time.fixedDeltaTime);
             }
         }
         #endregion
