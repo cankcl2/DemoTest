@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerForwardMovement : MonoBehaviour
 {
     Rigidbody rb;
-    public float speed = 0.0025f;
+    public float speed = 0.025f;
     public static bool gameEnded = false;
 
     void Start()
@@ -20,13 +20,12 @@ public class PlayerForwardMovement : MonoBehaviour
     void FixedUpdate()
     {
 
-        if (!gameEnded)
-        {
+        
             
-            Vector3 movement = transform.forward * speed * Time.fixedDeltaTime ;
+            Vector3 movement = transform.forward * -speed * Time.fixedDeltaTime ;
             rb.MovePosition(rb.position + movement);
 
-        }
+        
 
     }
 

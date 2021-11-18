@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
+    public static PlayerController instance;
     private float speedModifier = 0.008f;
     float speed = 18f;
     Rigidbody rb;
-    
+    public GameObject dashesParent;
+    public GameObject prevDash;
 
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -45,5 +53,21 @@ public class PlayerController : MonoBehaviour
         }
         #endregion
         //Debug.Log(transform.position.z);
+
+       
+    }
+    public void HaveDashes(GameObject dash)
+    {
+        dash.transform.SetParent(dashesParent.transform);
+        Vector3 pos = prevDash.transform.localPosition;
+        pos.y -= 0.96f;
+        dash.transform.localPosition = pos;
+
+        Vector3 karakterPos = transform.localPosition;
+        karakterPos.y += 0.96f;
+        transform.localPosition = karakterPos;
+        prevDash = dash;
+
+        prevDash.GetComponent<BoxCollider>().isTrigger = false;
     }
 }
