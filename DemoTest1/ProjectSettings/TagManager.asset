@@ -7,6 +7,9 @@ TagManager:
   - Dashes
   - Normal
   - Pick
+  - Collectibles
+  - WallObstacles
+  - BouysUnderPlayer
   layers:
   - Default
   - TransparentFX

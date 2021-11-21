@@ -8,7 +8,11 @@ public class StackTrigger : MonoBehaviour
     {
         if (other.tag == "Pick")
         {
-            StackManager.instance.Pickup(other.gameObject, true, "Untagged",false);
+            StackManager.instance.Pickup(other.gameObject, true, "BouysUnderPlayer",false);
+        }
+        if (other.tag == "WallObstacles")
+        {
+            StackManager.instance.DestroyFunc();
         }
     }
 }
