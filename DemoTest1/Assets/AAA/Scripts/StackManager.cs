@@ -52,7 +52,7 @@ public class StackManager : MonoBehaviour
         }
         else if (bouys.Length == 1)
         {
-            //To do sth.
+            //Add Scene 
         }
     }
 }

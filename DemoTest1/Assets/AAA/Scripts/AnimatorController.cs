@@ -4,16 +4,22 @@ using UnityEngine;
 
 public class AnimatorController : MonoBehaviour
 {
-    Animator animator;
+    public static AnimatorController instance;
+    Animator animatorForPlayer;
     void Start()
     {
-        animator = GetComponent<Animator>();
-        animator.SetTrigger("sittingTrigger");
+        animatorForPlayer = GetComponent<Animator>();
+        animatorForPlayer.SetTrigger("sittingTrigger");
+        if (instance == null)
+        {
+            instance = this;
+        }
     }
 
     // Update is called once per frame
-    void Update()
+    public void DyingAnimationCaller()
     {
+        animatorForPlayer.SetBool("isDead", true);
         
     }
 }

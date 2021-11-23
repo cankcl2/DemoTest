@@ -14,5 +14,6 @@ public class StackTrigger : MonoBehaviour
         {
             StackManager.instance.DestroyFunc();
         }
+        
     }
 }

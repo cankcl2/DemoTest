@@ -10,6 +10,7 @@ TagManager:
   - Collectibles
   - WallObstacles
   - BouysUnderPlayer
+  - WallObstaclesDouble
   layers:
   - Default
   - TransparentFX
