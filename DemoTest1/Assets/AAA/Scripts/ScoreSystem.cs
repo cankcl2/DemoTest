@@ -5,9 +5,10 @@ using UnityEngine;
 public class ScoreSystem : MonoBehaviour
 {
     public int theScore = 0;
+    public GUIStyle scoreStyle;
 
     private void OnGUI()
     {
-        GUI.Label(new Rect(230, 10, 100, 20), "Score : " + theScore);
+        GUI.Label(new Rect(230, 10, 180, 65), "Score : " + theScore , scoreStyle);
     }
 }

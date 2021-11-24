@@ -11,6 +11,10 @@ TagManager:
   - WallObstacles
   - BouysUnderPlayer
   - WallObstaclesDouble
+  - x1
+  - x2
+  - x3
+  - x4
   layers:
   - Default
   - TransparentFX

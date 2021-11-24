@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StackManager : MonoBehaviour
 {
@@ -52,7 +53,7 @@ public class StackManager : MonoBehaviour
         }
         else if (bouys.Length == 1)
         {
-            //Add Scene 
+            SceneManager.LoadScene("SampleScene");
         }
     }
 }
